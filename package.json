@@ -10,25 +10,74 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:fe-file-rename.rename"
+		"onCommand:fe-file-rename.checkName"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
-		"menus": {
-			"explorer/context": [{
-				"command": "fe-file-rename.rename",
-				"group": "navigation"
-			}],
-			"commandPalette": [{
-				"when": "filesExplorerFocus"
-			}]
-		},
 		"commands": [
 			{
-				"command": "fe-file-rename.rename",
-				"title": "重命名…"
+				"command": "fe-file-rename.checkName",
+				"title": "前端项目命名规范检查"
+			},
+			{
+				"command": "fe-file-rename.refresh",
+				"title": "刷新文件树",
+				"icon": "resources/refresh.svg"
+			},
+			{
+				"command": "fe-file-rename.switchCheckType",
+				"title": "切换检查规则",
+				"icon": "resources/switch.svg"
+			},
+			{
+				"command": "fe-file-rename.batchOp",
+				"title": "批量按规则修改",
+				"icon": "resources/batchOp.svg"
 			}
-		]
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "fe-file-rename.checkName",
+					"when": "filesExplorerFocus",
+					"group": "navigation"
+				}
+			],
+			"view/title": [
+				{
+					"command": "fe-file-rename.refresh",
+					"when": "isProjectTreeInit && view == feProjectTree-main",
+					"group": "navigation@1"
+				},
+				{
+					"command": "fe-file-rename.switchCheckType",
+					"when": "isProjectTreeInit && view == feProjectTree-main",
+					"group": "navigation@2"
+				},
+				{
+					"command": "fe-file-rename.batchOp",
+					"when": "isProjectTreeInit && view == feProjectTree-main",
+					"group": "navigation@3"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "feProjectTree",
+					"title": "FE-PROJECT-RENAME",
+					"icon": "resources/project.svg"
+				}
+			]
+		},
+		"views": {
+			"feProjectTree": [
+				{
+					"id": "feProjectTree-main",
+					"name": ""
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -58,6 +107,7 @@
 		"webpack-cli": "^4.4.0"
 	},
 	"dependencies": {
-		"fe-mv": "^1.0.1"
+		"fe-mv": "^1.0.1",
+		"lodash": "^4.17.21"
 	}
 }
