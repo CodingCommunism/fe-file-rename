@@ -11,9 +11,9 @@
 ## **功能介绍**
 ### **第一步**：初始化前端目录
 我们选择当前工作空间的某一个文件右键，点击“初始化前端目录”  
-![step1](https://github.com/gepingli/fe-file-rename/raw/main/resources/step1.jpg)
+![step1](https://github.com/CodingCommunism/fe-file-rename/raw/main/resources/step1.jpg)
 ### **第二步**：批量修改不合规文件名&&文件路径变动自动修改引用
-![step2](https://github.com/gepingli/fe-file-rename/raw/main/resources/step2.jpg)   
+![step2](https://github.com/CodingCommunism/fe-file-rename/raw/main/resources/step2.jpg)   
 上面四个按钮功能分别是：
 1. 刷新文件树：对此处显示的文件树进行手动更新[即使不手动更新，此处文件树也会自动watch文件变化进行更新]
 2. 开启关闭自动引用修改：`默认关闭`,开启后文件路径变化自动更新引用，**一次修改一个文件或者文件夹的路径，否则不做引用修改**~

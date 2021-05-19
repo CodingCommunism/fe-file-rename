@@ -16,5 +16,11 @@
 - `feat`: 添加文件变更同步修改依赖开关
 # 0.0.7
 - `feat`: readme使用文档补充
+
+# 0.0.8
+- 'feat': 优化用户体验：开关状态&&信息提示优化
 # 待办
-- `todo`: img src的引用修改.
+- `todo`: 增加图片等资源替换规则。支持src引用修改。
+- `todo`: ALLOW_LIST不仅限于 ts js vue。加入less sass引用资源支持
+- `todo`: 读取jsconfig或者tsconfig。动态获取路径配置信息（比如：‘@/* ’)
+- `todo`: 修复‘@/xxx’和‘../’长度判断bug。使用更短路径

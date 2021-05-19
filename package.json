@@ -2,7 +2,7 @@
 	"name": "fe-file-rename",
 	"displayName": "fe-file-rename",
 	"description": "在前端项目中，可视化地移动（重命名）文件/文件夹，同时更新引用。",
-	"version": "0.0.5",
+	"version": "0.0.8",
 	"icon": "resources/hancao.jpg",
 	"publisher": "hancao97",
 	"engines": {
@@ -27,9 +27,14 @@
 				"icon": "resources/refresh.svg"
 			},
 			{
-				"command": "fe-file-rename.switchOnOff",
-				"title": "自动引用修改开关",
-				"icon": "resources/on-off.svg"
+				"command": "fe-file-rename.switchOn",
+				"title": "开启自动引用修改",
+				"icon": "resources/on.svg"
+			},
+			{
+				"command": "fe-file-rename.switchOff",
+				"title": "关闭自动引用修改",
+				"icon": "resources/off.svg"
 			},
 			{
 				"command": "fe-file-rename.switchCheckType",
@@ -57,8 +62,13 @@
 					"group": "navigation@1"
 				},
 				{
-					"command": "fe-file-rename.switchOnOff",
-					"when": "isProjectTreeInit && view == feProjectTree-main",
+					"command": "fe-file-rename.switchOn",
+					"when": "isProjectTreeInit && view == feProjectTree-main && fe-file-rename.isAutoReference == no",
+					"group": "navigation@2"
+				},
+				{
+					"command": "fe-file-rename.switchOff",
+					"when": "isProjectTreeInit && view == feProjectTree-main && fe-file-rename.isAutoReference == yes",
 					"group": "navigation@2"
 				},
 				{
@@ -124,6 +134,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gepingli/fe-file-rename"
+		"url": "https://github.com/CodingCommunism/fe-file-rename"
 	}
 }
