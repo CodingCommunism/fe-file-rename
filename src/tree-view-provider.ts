@@ -51,7 +51,7 @@ export class TreeViewProvider implements TreeDataProvider<TreeItemNode>{
         subTree.sort((fileFront:any,fileEnd:any)=>fileFront.type.length - fileEnd.type.length);
         return subTree.map(
             (item:any) => {
-                const collapsedType = item.type === 'dir' ? 'Collapsed' : 'None';
+                const collapsedType = item.type === 'dir' ? 'Expanded' : 'None';
                 const node = new TreeItemNode(
                     item.name as string,
                     TreeItemCollapsibleState[collapsedType],

@@ -1,1 +1,21 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1621408182386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2359" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M714.206 204.152l-404.239 0c-169.953 0-307.726 137.774-307.726 307.727S140.015 819.605 309.967 819.605L714.206 819.605c169.95200001 0 307.726-137.773 307.72599999-307.726s-137.77400001-307.727-307.72599999-307.727z m0.349 586.348c-154.23 0-279.268-125.031-279.268-279.268S560.326 231.964 714.555 231.964c154.24 0 279.269 125.033 279.269 279.268 0 154.238-125.03 279.268-279.269 279.268z" fill="#49c265" p-id="2360"></path></svg>
+<svg width="1602" height="1202" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="1202" width="1602" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" height="1200" width="1600"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <defs>
+   <style type="text/css"/>
+  </defs>
+  <g stroke="null" id="svg_7">
+   <path stroke="null" id="svg_4" data-spm-anchor-id="a313x.7781069.0.i45" p-id="8727" fill="#1afa29" d="m1144.187054,959.978509l-712.369573,0c-216.382261,0 -391.803266,-188.650633 -391.803266,-421.351674s175.421005,-421.351674 391.803266,-421.351674l712.369573,0c216.382261,0 391.803266,188.650633 391.803266,421.351674s-175.421005,421.351674 -391.803266,421.351674z"/>
+   <path stroke="null" id="svg_6" class="selected" data-spm-anchor-id="a313x.7781069.0.i46" p-id="8729" fill="#ffffff" d="m1142.162915,536.451851m370.332865,0a-370.332865,-387.3866 0 1 0 -740.665731,0a-370.332865,-387.3866 0 1 0 740.665731,0z"/>
+  </g>
+ </g>
+</svg>
