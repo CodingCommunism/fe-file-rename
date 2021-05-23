@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { changeReferenceSync } from 'fe-mv/lib/move';
-import { getProjectDir, showProjectTree, showTypeMessage, formatFileName, getSwitchType, checkOperable } from './handlers/handlers';
+import { fileExistsWithCaseSync, getProjectDir, showProjectTree, showTypeMessage, formatFileName, getSwitchType, checkOperable } from './handlers/handlers';
 import { DEFAULT_TYPES } from './configs/configs';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -153,7 +153,7 @@ export function activate(context: vscode.ExtensionContext) {
 		for(const operateItem of operator) {
 			const normativeName = formatFileName(operateItem.name, operateItem.type, operateItem.type === 'dir' ? currentTypes[0] : currentTypes[1]);
 			const newPath = path.join(operateItem.path, '..', normativeName);
-			if(fs.existsSync(newPath)){
+			if(fileExistsWithCaseSync(newPath)){
 				vscode.window.showWarningMessage(`修改后会出现文件路径冲突,未做修改，路径为：${operateItem.path.replace(projectRootPath,'')}`);
 				continue;
 			}

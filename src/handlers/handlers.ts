@@ -142,7 +142,8 @@ export const getFileMap = (projectFileTree:any, types:any, map?:any) => {
 };
 
 export const formatFileName = (fileName:string, type:string, rule:string) => {
-  const underlineReg = new RegExp(/^(_)\1$/);
+  // _开头结尾做保留
+  const underlineReg = new RegExp(/^(_)[^]*\1$/);
   if(type === 'dir'){
     if(underlineReg.test(fileName)){
       return `_${lodashFormat(fileName.substring(1,fileName.length - 1), rule)}_`;
@@ -153,7 +154,7 @@ export const formatFileName = (fileName:string, type:string, rule:string) => {
     const fileInfoList = fileName.split('.');
     const fileSuffix = fileInfoList[1]||'';
     const fileBaseName = fileInfoList[0];
-    if(underlineReg.test(fileName)) {
+    if(underlineReg.test(fileBaseName)) {
       return fileSuffix ? `_${lodashFormat(fileBaseName.substring(1,fileBaseName.length - 1), rule)}_.${fileSuffix}`:`_${lodashFormat(fileBaseName.substring(1,fileBaseName.length - 1), rule)}_`;
     } else {
       return fileSuffix ? `${lodashFormat(fileBaseName, rule)}.${fileSuffix}`:lodashFormat(fileBaseName, rule);
@@ -170,6 +171,18 @@ export const checkOperable = (oldSource:string, newSource:string) => {
     return true;
   }
   return false;
+};
+
+export const fileExistsWithCaseSync = (filepath: string):any => {
+  let path = require('path');
+  let fs = require('fs');
+  let dir = path.dirname(filepath);
+  let filenames = fs.readdirSync(dir);
+  if (filenames.indexOf(path.basename(filepath)) === -1) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 

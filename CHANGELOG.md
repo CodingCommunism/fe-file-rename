@@ -21,8 +21,12 @@
 - 'feat': 优化用户体验：开关状态&&信息提示优化
 # 0.0.9
 - 'feat': 文件树默认展开&&图标优化
+
+# 0.0.10
+- `fix`: 修复文件是否存在判断bug
+- `fix`: 修复_下划线处理bug
 # 待办
-- `todo`: 增加图片等资源替换规则。支持src引用修改。
+- `todo`: 增加图片等资源替换规则。支持src引用修改,支持import 'xxx'形式引用
 - `todo`: ALLOW_LIST不仅限于 ts js vue。加入less sass引用资源支持
 - `todo`: 读取jsconfig或者tsconfig。动态获取路径配置信息（比如：‘@/* ’)
 - `todo`: 修复‘@/xxx’和‘../’长度判断bug。使用更短路径
